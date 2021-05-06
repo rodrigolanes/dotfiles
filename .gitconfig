@@ -1,7 +1,3 @@
-[http]
-	sslVerify = false
-[https]
-	sslVerify = false
 [color]
 	branch = auto
 	diff = auto
