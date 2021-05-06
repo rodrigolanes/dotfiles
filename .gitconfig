@@ -1,0 +1,39 @@
+[http]
+	sslVerify = false
+[https]
+	sslVerify = false
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	c = !git add --all && git commit -m
+	ci = commit
+	co = checkout
+	s = status -s
+	st = status
+	br = branch
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --pretty=format:'%h %s' --graph
+	amend = !git add --all && git commit --amend --no-edit
+	count = !git shortlog -s --grep
+	t = !sh -c 'git tag -a $1 -m $1'
+	pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+[push]
+	followTags = true
+[init]
+	defaultBranch = main
+
